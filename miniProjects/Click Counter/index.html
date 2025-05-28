@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click Counter</title>
+  </head>
+  <body>
+    <!-- Great! Here’s the idea for the **Click Counter** mini project:
+
+* Show a button on the webpage
+* Each time the user clicks the button, increase the counter by 1
+* Display the current count dynamically on the page
+
+No code here as you requested, but the steps you’ll follow are:
+
+1. Create a button element in HTML.
+2. Create a place (like a `<div>` or `<span>`) to show the count.
+3. Use JavaScript to listen for button clicks.
+4. Increase a counter variable each time button is clicked.
+5. Update the count display every click.
+
+Try making it yourself and if you get stuck or want me to check your code, just ask! Want me to suggest enhancements later? -->
+    <!-- 
+    <button id="clickMe">Click Me!</button>
+    <div id="countDisplay">Current Count: 0</div>
+
+    <script>
+        let count = 0;
+        document.getElementById("clickMe").addEventListener("click", function() {
+            count++;
+            document.getElementById("countDisplay").innerText = "Current Count: " + count;
+        });
+    </script> -->
+
+    <button id="click-btn">Click Me!</button>
+    <div id="counterDisplay">Current Count : 0</div>
+    <script>
+      let count = 0;
+      const counterDisplay = document.getElementById("counterDisplay");
+      document.getElementById("click-btn").addEventListener("click", () => {
+        count++;
+        counterDisplay.innerText = `Current Count : ${count}`;
+      });
+    </script>
+  </body>
+</html>
