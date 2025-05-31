@@ -4,7 +4,7 @@ Here’s how we’ll tackle **Arrays** and **Objects** with some hands-on mini t
 
 ---
 
-## 🔹 **📦 Arrays – Quick Concepts**
+//////// ! *📦 Arrays – Quick Concepts**
 
 Arrays store multiple values in a single variable.
 
@@ -18,6 +18,24 @@ Arrays store multiple values in a single variable.
 6. Use `.forEach()` to log all fruits with their index
 
 ---
+
+*/
+let fruits = ['Apple','Banana','Mango','PineApple','lechee'];
+
+
+
+
+for(let i = 0;i<=fruits.length-1;i++){
+   console.log(fruits[i]);
+}
+fruits.push("any fruit",2);
+
+
+for(let i = 0;i<=fruits.length-1;i++){
+   console.log(fruits[i]);
+}
+
+/*
 
 ## 🔹 **👤 Objects – Quick Concepts**
 
