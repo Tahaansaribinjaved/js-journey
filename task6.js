@@ -28,12 +28,22 @@ let fruits = ['Apple','Banana','Mango','PineApple','lechee'];
 for(let i = 0;i<=fruits.length-1;i++){
    console.log(fruits[i]);
 }
-fruits.push("any fruit",2);
+fruits.push("any fruit");
 
 
 for(let i = 0;i<=fruits.length-1;i++){
    console.log(fruits[i]);
 }
+fruits.pop();
+for(let i = 0;i<=fruits.length-1;i++){
+   console.log(fruits[i]);
+}
+fruits.unshift("starting fruit");
+fruits.shift();
+fruits.forEach((fruit, index) => {
+   console.log(`Index ${index}: ${fruit}`);
+});
+
 
 /*
 
