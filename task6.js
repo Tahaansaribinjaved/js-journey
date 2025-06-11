@@ -74,3 +74,17 @@ Then we’ll move to:
 **Template Literals + DOM + Events**
 and finally… your first **basic-level project** 😎
 */
+let student = {
+   name : "Taha",
+   age: 18,
+   isEnrolled:true,
+   courses : ['Math', 'Science', 'History']
+}
+console.log(`Name: ${student.name}`);
+console.log(`Courses: ${student.courses.join(', ')}`);
+student.grade = 'A';
+student.age = 19;
+delete student.isEnrolled;
+for (let key in student){
+   console.log(`${key.charAt(0).toUpperCase() + key.slice(1)}: ${student[key]}`);
+}
