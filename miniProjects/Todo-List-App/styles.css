@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.header{
+    text-align: center;
+    margin: 20px;
+}
+.form-section {
+    margin-bottom: 20px;
+    border: 3px solid #ccc;
+    width: 500px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+#todo-form {
+    display: flex;
+    width: 100%;
+}
+
+#todo-input {
+    flex: 1; /* input ko poori jagah dene ke liye */
+    padding: 10px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    min-width: 0;
+    /* optional: */
+    /* width: 100%; */
+}
+#add-todo {
+    flex: 0 0 auto; /* sirf apne size ke mutabiq rahega */
+    background-color: #007bff;
+    
+    /* border-radius: 10px; */
+    /* width: 100px; */
+    /* height: 100%; */
+}
+#add-todo:hover {
+    transition: all 0.3s ease;
+    background-color: #0056b3; /* hover effect */
+    opacity: 0.8;
+
+}
+#clear-todos {
+    flex: 0 0 auto; /* sirf apne size ke mutabiq rahega */
+    border-radius: 0 8px 8px 0;
+    height: 100%;
+    background-color: #dc3545;
+}
+#clear-todos:hover {
+    transition: all 0.3s ease;
+    background-color: #c82333; /* hover effect */
+    opacity: 0.8;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    /* border-radius: 0 10px 10px 0; */
+    color: white;
+    cursor: pointer;
+    flex: 0 0 auto; /* sirf apne size ke mutabiq rahega */
+}
+
+
+/* Remove default list styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 500px; /* Set a fixed width for the list */
+    max-height: 400px; /* Optional: limit the height of the list */
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+/* List item styling */
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Items spread out */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* transition: background-color 0.3s ease; */
+}
+
+/* Left part: checkbox and task text */
+li span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between checkbox and text */
+}
+
+/* Task text style */
+#todo-text {
+    font-size: 16px;
+}
+
+
+/* Right part: buttons */
+li span:last-child button {
+    margin-left: 8px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* background-color: #007bff; */
+    color: white;
+    font-size: 14px;
+}
+
+.edit-todo {
+    background-color: #28a745; /* Green for edit */
+    transition: all 0.3s ease;
+}
+.edit-todo:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+.delete-todo {
+    background-color: #dc3545; /* Red for delete */
+    transition: all 0.3s ease;
+}
+.delete-todo:hover {
+    background-color: #c82333; /* Darker red on hover */
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+

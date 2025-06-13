@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App (CRUD + LocalStorage)</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+   <div class="container">
+    <div class="header"><h1>TODO LIST APP</h1></div>
+    <div class="form-section">
+        <form id="todo-form">
+            <input type="text"  id="todo-input" placeholder="Enter a new task" required>
+            <button type="submit" id="add-todo">Add Task</button>
+            <button type="button" id="clear-todos">Clear All</button>
+        </form>
+    </div>
+    <div class="todo-list">
+        <ul id="todo-list">
+            <!-- List items will be dynamically added here -->
+             <li>
+                <span>
+                    <input type="checkbox" class="todo-checkbox">
+                    <span class="todo-text">Sample Task</span>
+                </span>
+                <span>
+                    <button class="edit-todo">Edit</button>
+                <button class="delete-todo">Delete</button>
+                </span>
+             </li>
+             <li>
+                <span>
+                    <input type="checkbox" class="todo-checkbox">
+                    <span class="todo-text">Sample Task</span>
+                </span>
+                <span>
+                    <button class="edit-todo">Edit</button>
+                <button class="delete-todo">Delete</button>
+                </span>
+             </li>
+             <li>
+                <span>
+                    <input type="checkbox" class="todo-checkbox">
+                    <span class="todo-text">Sample Task</span>
+                </span>
+                <span>
+                    <button class="edit-todo">Edit</button>
+                <button class="delete-todo">Delete</button>
+                </span>
+             </li>
+            
+        </ul>    
+   </div>
+   </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
