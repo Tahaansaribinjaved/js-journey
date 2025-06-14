@@ -3,7 +3,13 @@
     margin: 0;
     padding: 0;
 }
+input[type=checkbox]{
+    background-color: #FA9E57;
+}
 
+input[type=checkbox]:checked{
+    background-color: #6c757d;
+}
 .container{
     width: 100%;
     height: 100vh;
@@ -95,6 +101,7 @@ li {
     align-items: center;
     justify-content: space-between; /* Items spread out */
     padding: 10px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #ccc;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -127,7 +134,13 @@ li span:last-child button {
     color: white;
     font-size: 14px;
 }
-
+li span:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3px;
+    align-items: end;
+}
 .edit-todo {
     background-color: #28a745; /* Green for edit */
     transition: all 0.3s ease;
@@ -145,5 +158,20 @@ li span:last-child button {
     background-color: #c82333; /* Darker red on hover */
     opacity: 0.8;
     transform: scale(1.2);
+}
+
+.time{
+    /* margin-top:  0px ; */
+    /* height: ; */
+    /* font-size: 14px; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+.completed {
+    text-decoration: line-through;
+    color: #6c757d; /* Grey color for completed tasks */
+    opacity: 0.7; /* Optional: make completed tasks slightly transparent */
 }
 
