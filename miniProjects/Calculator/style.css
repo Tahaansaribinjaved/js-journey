@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.mainDiv{
+    height: 420px;
+    width: 300px;
+    background-color: aqua;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display{
+    height: 80px;
+    width: 245px;
+    background-color: #333;
+    color: #ccc;
+    margin-bottom: 20px ;
+    border-radius: 12px ;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 30px;
+    padding: 10px;
+
+}
+.btn-section{
+    height: 280px;
+    width: 245px;
+    /* background-color: yellow; */
+    display: flex;
+
+}
+.btn-num-section{
+ background-color: yellow;
+ flex: 1;
+}
+.btn-num-section{
+ background-color: white;
+  display: flex; 
+  border-radius: 10px;
+ /* flex-direction: column; */ 
+ flex-wrap: wrap;
+}
+.btn-num-section button{
+    height: 93px;
+    width: 65px;
+    border: 2px solid #000;
+    /* border-radius: 5px; */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btn-op-section{
+ /* background-color: white; */
+ display: flex;
+ flex-direction: column;
+}
+.btn-op-section button{
+    height: 40px;
+    width: 50px;
+    border: 2px solid #000;
+    /* border-radius: 5px; */
+    font-size: 20px;
+    cursor: pointer;
+    color: #eee;
+    background-color: rgba(95, 111, 128, 0.829);
+}
+#answer-btn{
+    /* display: none; */
+    background-color: rgba(95, 111, 128, 0.546);
+    cursor: not-allowed;
+}

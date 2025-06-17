@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Calculator Simple arithmetic operations with buttons and display updates. -->
+     <div class="mainDiv">
+        <div class="display" id="display">2046</div>
+        <div class="btn-section">
+
+            <div class="btn-num-section">
+            <button onclick="clickBtn(event)" >1</button>
+            <button onclick="clickBtn(event)">2</button>
+            <button onclick="clickBtn(event)">3</button>
+            <button onclick="clickBtn(event)">4</button>
+            <button onclick="clickBtn(event)" >5</button>
+            <button onclick="clickBtn(event)" >6</button>
+            <button onclick="clickBtn(event)" >7</button>
+            <button onclick="clickBtn(event)" >8</button>
+            <button onclick="clickBtn(event)" >9</button>
+        </div>
+        <div class="btn-op-section">
+            <button onclick="clickBtn(event)" >C</button>
+            <button onclick="clickBtn(event)" >back</button>
+            <button onclick="clickBtn(event)" >+</button>
+            <button onclick="clickBtn(event)" >-</button>
+            <button onclick="clickBtn(event)" >/</button>
+            <button onclick="clickBtn(event)" >*</button>
+            <button onclick="clickBtn(event)" id="answer-btn" disabled  >=</button>
+            <!-- <button>=</button> -->
+        </div>
+    </div>
+     </div>
+     <script src="app.js"></script>
+</body>
+</html>

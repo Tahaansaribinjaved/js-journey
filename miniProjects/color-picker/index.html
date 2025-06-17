@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>color picker</title>
+    <style>
+        body{
+            background-color: #444;
+        }
+      div {
+        height: 100px;
+        width: 200px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        letter-spacing: 1px;
+        border-radius: 15px;
+        /* background-color: aqua; */
+      }
+       #output {
+           width:fit-content ; 
+           /* height: 100%; */
+        display: flex;
+        gap: 10px;
+
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+
+        /* height: 2050px; */
+       }
+    </style>
+  </head>
+  <body>
+    <!-- <input onchange="getInpColor(event)" type="color" name="" id="inp" /> -->
+    <div  id="output"></div>
+    <script>
+    //   const getInpColor = (e) => {
+    //     console.log(e.target.value);
+        
+    //   };
+      const generateRandomColor = () => {
+        // with rgb
+        // let child_div = document.createElement("div");
+        // let ouput = document.getElementById('output');
+        // let red = Math.floor(Math.random() * 254);
+        // let green = Math.floor(Math.random() * 254);
+        // let blue = Math.floor(Math.random() * 254);
+        // // let opacity = Math.random() * 1;
+        // let bg_color = `rgb(${red},${green},${blue})`;
+        // // console.log(`rgba(${red},${green},${blue},${opacity})`);
+        // child_div.innerText = bg_color;
+        // // child_div.oncopy
+        
+        // child_div.style.backgroundColor = bg_color;
+        // ouput.appendChild(child_div);
+
+        // with HEX 
+        let arr = ['1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+        let child_div = document.createElement("div");
+        let ouput = document.getElementById('output');
+        let red_index1 = Math.floor(Math.random() * (arr.length -1));
+        let red_index2 = Math.floor(Math.random() * (arr.length -1));
+        let red = arr[red_index1]+arr[red_index2];
+        let green_index1 = Math.floor(Math.random() * (arr.length -1) );
+        let green_index2 = Math.floor(Math.random() * (arr.length -1) );
+        let green = arr[green_index1]+arr[green_index2];
+        let blue_index1 = Math.floor(Math.random() * (arr.length -1) );
+        let blue_index2 = Math.floor(Math.random() * (arr.length -1) );
+        let blue = arr[blue_index1]+arr[blue_index2];
+        let bg_color = `#${red}${green}${blue}`;
+        // console.log(`rgba(${red},${green},${blue},${opacity})`);
+        child_div.innerText = bg_color;
+        // child_div.oncopy
+        
+        child_div.style.backgroundColor = bg_color;
+        ouput.appendChild(child_div);
+        
+      };
+      for (let index = 0; index <= 100; index++) {
+        // Math.random
+        generateRandomColor();
+      }
+
+    </script>
+  </body>
+</html>
