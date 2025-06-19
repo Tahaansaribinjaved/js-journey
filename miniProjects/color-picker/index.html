@@ -41,6 +41,13 @@
     //     console.log(e.target.value);
         
     //   };
+          const getBrightness = (hex) => {
+  const r = parseInt(hex.substr(1, 2), 16);
+  const g = parseInt(hex.substr(3, 2), 16);
+  const b = parseInt(hex.substr(5, 2), 16);
+  return (r * 299 + g * 587 + b * 114) / 1000;
+};
+
       const generateRandomColor = () => {
         // with rgb
         // let child_div = document.createElement("div");
@@ -61,14 +68,14 @@
         let arr = ['1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
         let child_div = document.createElement("div");
         let ouput = document.getElementById('output');
-        let red_index1 = Math.floor(Math.random() * (arr.length -1));
-        let red_index2 = Math.floor(Math.random() * (arr.length -1));
+        let red_index1 = Math.floor(Math.random() * arr.length );
+        let red_index2 = Math.floor(Math.random() * arr.length );
         let red = arr[red_index1]+arr[red_index2];
-        let green_index1 = Math.floor(Math.random() * (arr.length -1) );
-        let green_index2 = Math.floor(Math.random() * (arr.length -1) );
+        let green_index1 = Math.floor(Math.random() * arr.length  );
+        let green_index2 = Math.floor(Math.random() * arr.length  );
         let green = arr[green_index1]+arr[green_index2];
-        let blue_index1 = Math.floor(Math.random() * (arr.length -1) );
-        let blue_index2 = Math.floor(Math.random() * (arr.length -1) );
+        let blue_index1 = Math.floor(Math.random() * arr.length  );
+        let blue_index2 = Math.floor(Math.random() * arr.length  );
         let blue = arr[blue_index1]+arr[blue_index2];
         let bg_color = `#${red}${green}${blue}`;
         // console.log(`rgba(${red},${green},${blue},${opacity})`);
@@ -76,13 +83,21 @@
         // child_div.oncopy
         
         child_div.style.backgroundColor = bg_color;
+        child_div.style.color = getBrightness(bg_color) > 128 ? "#000" : "#fff";
         ouput.appendChild(child_div);
+        child_div.addEventListener("click", () => {
+          navigator.clipboard.writeText(bg_color);
+            alert(`${bg_color} copied to clipboard!`);
+          });
+
         
       };
       for (let index = 0; index <= 100; index++) {
         // Math.random
         generateRandomColor();
       }
+      
+
 
     </script>
   </body>
