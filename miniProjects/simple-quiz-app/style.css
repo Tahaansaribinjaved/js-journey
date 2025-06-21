@@ -282,13 +282,13 @@ body{
 #resultContainer button:hover {
     background-color: #45a049;
 }
-#result-page {
-    /* display: none; */
-}
+    #result-page {
+        display: none;
+    }
     #quiz-page {
         display: none;
     }
     
     #first-page {
-        display: none;
+        /* display: none; */
     }
