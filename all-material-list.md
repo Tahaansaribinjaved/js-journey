@@ -194,3 +194,42 @@ Let me know how you want to proceed!
 ---
 
 If you want, I can also give you a **weekly study plan** for this roadmap with resources and exercises. Just say the word!
+
+
+Perfect timing, Taha! 👌 You're already strong in the **basics**, so now let's **wrap up intermediate JavaScript + one mini project** this week — and then **start React next Monday** 💥
+
+---
+
+## ✅ 7-Day JavaScript Completion Plan (with Weather Dashboard Project)
+
+| **Day**            | **Target Topics / Tasks**                                                                      | **Practice / Code**                                                                                                      |
+| ------------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **Day 1 (Today)**  | 🔹 Destructuring<br>🔹 Spread & Rest Operators<br>🔹 Default Params & Enhanced Object Literals | ✅ Code 5 short examples of each in JS file<br>✅ Quiz app: Refactor functions using default params & destructuring        |
+| **Day 2**          | 🔹 Array methods (`map`, `filter`, `reduce`, `find`, `some`, `every`)                          | ✅ Solve 6 mini problems using these<br>✅ Convert hardcoded questions to `map()` usage                                    |
+| **Day 3**          | 🔹 Closures<br>🔹 Callbacks<br>🔹 Higher Order Functions                                       | ✅ Build a mini closure-based counter<br>✅ Quiz app: Add a callback to simulate delayed scoring                           |
+| **Day 4**          | 🔹 `this`, `call()`, `apply()`, `bind()`<br>🔹 ES6 Classes + Inheritance                       | ✅ 1 object problem + 1 class-based model<br>✅ Convert your question object into a class                                  |
+| **Day 5**          | 🔹 `fetch()` & Async/Await<br>🔹 JSON handling<br>🔹 Error handling with try/catch             | ✅ Fetch dummy API like `https://jsonplaceholder.typicode.com/posts`<br>✅ Print data on the page<br>✅ Add try/catch logic |
+| **Day 6**          | 🚀 **Start Weather Dashboard Project**<br>UI + API setup                                       | ✅ Design layout<br>✅ Integrate OpenWeatherMap API<br>✅ Display city + temp + weather icon                                |
+| **Day 7 (Sunday)** | ✅ **Finish Weather Dashboard**<br>+ Recap all concepts                                         | ✅ Add search input<br>✅ Handle errors (invalid city)<br>✅ Style it and clean code using modules                          |
+
+---
+
+### 🔚 After This Week:
+
+You'll be fully ready for:
+
+* React (`useState`, props, components)
+* Node/Express (when learning backend)
+* Internship applications
+
+---
+
+### 🛠️ Tools & Resources
+
+* [OpenWeatherMap API](https://openweathermap.org/api) for project
+* [MDN JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) for deep reading
+* [JavaScript.info](https://javascript.info/) for conceptual clarity
+
+---
+
+Shall I create the **Weather Dashboard folder structure + starter HTML/CSS for Day 6** now for you?

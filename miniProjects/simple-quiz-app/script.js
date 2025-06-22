@@ -90,7 +90,9 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     document.getElementById('first-page').style.display = 'none';
-    quizPage.style.display = 'block';
+    quizPage.style.display = 'flex';
+    // quizPage.style.alignContent = 'center'
+
     resultPage.style.display = 'none';
     renderQuestion();
 }
@@ -130,16 +132,16 @@ function nextQuestion() {
 
 function showResult() {
     document.getElementById('quiz-page').style.display = 'none';
-    resultPage.style.display = 'block';
+    resultPage.style.display = 'flex';
 
     // Show message based on score
-    if (score > 8) {
+    if (score >= 8) {
         resultMessage.innerText = `Congratulations 🎉! You passed with a score of ${score}/${questions.length}.`;
     } else {
         resultMessage.innerText = `Sorry 😢! You scored ${score}/${questions.length}. Try again!`;
     }
     finalScoreSpan.innerText = score;
-    restartButton.style.display ='block'
+    restartButton.style.display ='flex'
 }
 
 // Restart the quiz
