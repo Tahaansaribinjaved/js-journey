@@ -1,0 +1,108 @@
+const student = {
+  name: "Taha",
+  age: 18,
+  country: "Pakistan",
+};
+
+/// ✅ Task:
+/// Destructure the `name` and `country` only.
+
+const { name , country} = student;
+console.log(name); // Taha
+console.log(country); // Pakistan
+
+// ---
+
+const names = ["Ali", "Sara", "Taha", "Adeel", "Omar"];
+
+/// ✅ Task:
+/// Return only names longer than 4 characters
+
+const longNames = names.filter(name => name.length > 4);
+console.log(longNames); // ["Adeel"]
+
+// ---
+
+const items = [
+  { name: "Book", price: 200 },
+  { name: "Pen", price: 50 },
+  { name: "Bag", price: 500 },
+];
+
+/// ✅ Task:
+/// Calculate total price
+const totalPrice = items.reduce((sum, item) => sum + item.price, 0);
+console.log(totalPrice); // 750
+
+// ---
+
+
+const greet = (name = "Guest") => {
+    return `Hello, ${name}!`;
+}
+/// ✅ Task:
+/// Use the `greet` function with a default parameter.  
+console.log(greet()); // Hello, Guest!
+console.log(greet("Taha")); // Hello, Taha!
+
+
+// ---
+// 🔹 6. Rest operator: Combine arguments into array
+/// ✅ Task:
+/// Write a function `logAll(...values)`
+/// It should log: [val1, val2, val3]
+const logAll = (...values) => {
+    console.log(`[${values.join(", ")}]`);
+}
+logAll("Hello", "World", 42); // [Hello, World, 42]
+
+// ---
+const user = { name: "Taha", age: 18 };
+
+/// ✅ Task:
+/// Create a new object with `country: "Pakistan"` added
+const userWithCountry = { ...user, country: "Pakistan" };
+console.log(userWithCountry); // { name: "Taha", age: 18, country: "Pakistan" }
+// ---
+
+
+/// ✅ Task:
+/// Create a `counter()` function that returns an `increment()` function.
+/// When called, it increases and logs the count.
+function counter() {
+    let count = 0;
+    return function increment() {
+        count++;
+        console.log(`Counter: ${count}`);
+    };
+}
+const increment = counter();
+increment(); // Counter: 1
+increment(); // Counter: 2
+
+
+// ---
+
+const users = [
+  { id: 1, name: "Ali" },
+  { id: 2, name: "Sara" },
+];
+
+/// ✅ Task:
+/// Find the user with id === 2
+
+const userWithId2 = users.find(user => user.id === 2);
+console.log(userWithId2); // { id: 2, name: "Sara"
+
+// ---
+/// ✅ Task:
+/// Write a function `process(x, fn)` that applies fn to x
+
+function double(n) {
+  return n * 2;
+}
+console.log(process(5, double)); // 10
+function process(x, fn) {
+  return fn(x);
+}
+// ---
