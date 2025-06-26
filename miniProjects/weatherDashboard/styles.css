@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  transition: background 2s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.weather-container {
+  position: relative;
+  z-index: 10;
+  background: rgba(255,255,255,0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Buttons styling */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+
+
+/* Sunny Theme */
+body.sunny {
+  background: linear-gradient(to top, #FFD700, #FFA500); /* Bright sunny colors */
+}
+/* Cloudy Theme */
+body.cloudy {
+  background: linear-gradient(to top, #b0c4de, #778899); /* Grayish */
+    
+}
+/* Rainy Theme */
+body.rainy {
+  background: linear-gradient(to top, #3a3a3a, #1f1f1f); /* Dark */
+}
+
+
+
+.sun {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 10px rgb(255, 255, 0);
+  animation: glow 1s infinite alternate;
+}
+
+/* Sun glow pulse */
+@keyframes glow {
+ from { box-shadow: 0 0 30px 10px yellow; }
+  to { box-shadow: 0 0 50px 20px yellow; }
+}
+
+/* Cloud animation */
+.clouds {
+  position: absolute;
+  top: 10px;
+  width: 100%; /* ensure enough width for seamless repetition */
+  height: 100%; /* or your desired height */
+  background: url('./cloud-removebg-preview.png') repeat-x;
+  background-size: contain;
+  background-position: 0 0;
+  pointer-events: none; /* so it doesn't block interactions */
+  z-index: 5;
+  animation: driftClouds 60s linear infinite;
+}
+
+/* Animate background-position to create seamless drift */
+@keyframes driftClouds {
+  from { background-position: 0 0; }
+  to { background-position: -1000px 0; } /* shift left by 1000px for seamless loop */
+}
+
+/* Rain animation */
+.rain {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* allow clicks through */
+  overflow: hidden;
+}
+
+/* Generate multiple raindrops with JS */
+.raindrop {
+  position: absolute;
+  width: 5px;
+  height: 15px;
+  background: #00f;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    opacity: 0.6;
+    border-radius: 8px;
+  
+  animation: fall 1.5s linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
