@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+        }
+        .nav-container{
+            /* width: auto; */
+            /* height: 100vh; */
+            background-color: aqua;
+            z-index: 100;
+            
+            /* position: absolute; */
+        }
+        .nav-container.is-active{
+            transform: scaleX(20px);
+            transition: all 3s ease;
+            /* width: 30%; */
+        }
+        .nav-toggle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+            font-size: 1.2rem;
+
+        }
+        .nav-items{
+            display: none;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: blueviolet;
+            
+
+        }
+
+    </style>
+</head>
+
+<body>
+    
+         <div class="nav-container" tabindex="0">
+        <div class="nav-toggle">U</div>
+
+        <nav class="nav-items">
+          <a class="nav-item" href="#">🔁 Unit Toggle</a>
+          <a class="nav-item" href="#">📜 History</a>
+          <input type="text" name="" id="" class="nav-item">
+          <ul class="nav-item">
+            <li>title 1 </li>
+            <li>title 2 </li>
+            <li>title 3 </li>
+            <li>title 4 </li>
+            <li>title 5 </li>
+          </ul>
+          <a class="nav-item" href="#">🧹 Clear History</a>
+        </nav>
+      </div>
+
+      <div class="main">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dignissimos molestiae in consequatur ipsa quidem natus suscipit assumenda, illum similique dolores qui quam neque nobis obcaecati eligendi cumque quisquam? Illo.
+        Voluptates cupiditate accusantium maiores pariatur, id reprehenderit corporis, vero quae, quidem adipisci voluptatem. Dolore itaque explicabo doloremque incidunt nihil recusandae ea officia temporibus, dolorum architecto est non, harum exercitationem officiis.
+        Quas rerum incidunt porro quo impedit ex aspernatur hic totam labore, maxime quia esse aliquid alias eos similique, reiciendis beatae commodi deleniti. Aliquam eius exercitationem incidunt laboriosam ut repellendus magni.
+        Quis consequuntur nemo cupiditate consectetur dolorem similique facilis, sunt provident praesentium ratione suscipit aliquid nihil qui, modi dolorum nisi atque iste perferendis quod deleniti totam. Reprehenderit at molestias rem consequatur.
+        Consectetur, exercitationem! Nihil corrupti totam quis voluptas ipsam unde consectetur, consequatur, hic maiores tenetur explicabo dignissimos iure esse ducimus obcaecati. Ut earum inventore dolor, ipsa nobis eligendi ad laboriosam quos?
+        Quos, omnis at labore iure mollitia harum et quas autem velit architecto, dolorem ipsam nihil? Dolor vel est temporibus totam? Unde ipsam veritatis illo quidem id tempore reiciendis, provident sint?
+        Tempora amet nisi id pariatur. Qui aliquam voluptas consequuntur doloribus temporibus similique assumenda tenetur corporis reprehenderit voluptatem cum debitis neque veniam nemo, atque quibusdam, itaque est dignissimos distinctio quidem beatae.
+        Ad, soluta, nam quidem est voluptas quasi quia, recusandae repellendus repellat vero omnis illum illo enim adipisci inventore accusamus ab officia a! Earum necessitatibus, quidem aspernatur eligendi doloremque aliquid provident.
+        Soluta voluptatum labore laudantium facilis vero asperiores, incidunt voluptatibus, dicta dolor perferendis tempore deserunt iste aperiam magni in ipsum! Nobis, ipsum? Libero rerum quo omnis quisquam accusamus odit sapiente nesciunt!
+        Dolore explicabo, mollitia sequi perspiciatis iure illo aliquam dolores sint voluptatum fugiat ut saepe sed laboriosam incidunt. Consequuntur eligendi minima, vitae exercitationem excepturi expedita, illum dignissimos dicta perferendis dolores veniam?
+        Fugit reiciendis veritatis deleniti officiis minus dolor, velit in, eveniet eum facilis possimus suscipit quisquam, reprehenderit eaque iusto debitis! Omnis perspiciatis eos iure minus distinctio consectetur eum laudantium, sint magnam!
+        Necessitatibus ab illum impedit atque soluta nihil quaerat, dolorem, quisquam labore voluptatum saepe sint architecto laboriosam ratione consectetur omnis veniam corrupti, sequi reiciendis. Optio dolores minima corrupti suscipit harum pariatur?
+        Consectetur quas corrupti recusandae quasi quo distinctio minus esse voluptatum eveniet sint eos nemo rerum officiis saepe quisquam, sit vitae enim quidem ipsum! Pariatur sequi quidem tempore ratione nihil aliquid!
+        Aut, aperiam vel obcaecati reiciendis expedita nesciunt asperiores tenetur reprehenderit tempore aliquid modi, labore sapiente inventore! Veritatis neque error tempore suscipit, modi ex esse est ratione? Alias deleniti impedit sapiente!
+        Incidunt quis dolorum illo amet inventore assumenda explicabo dolor maxime eveniet, qui nobis? Praesentium nihil corrupti velit porro sed. Labore modi illo obcaecati inventore possimus eligendi, fugiat vero soluta nesciunt.
+        Ducimus quam vero minima error quae? Ipsam exercitationem quidem quibusdam repudiandae reprehenderit! Ab magni quas obcaecati, iste quo possimus, nisi est voluptatibus sunt doloremque beatae magnam, distinctio repudiandae fugiat nostrum?
+        Placeat rerum tempora amet nemo facere, eveniet recusandae omnis vel laboriosam vitae possimus quis temporibus. Pariatur dolore doloribus id enim magnam impedit recusandae error nostrum optio libero, mollitia placeat architecto!
+        Repellat exercitationem ratione blanditiis aliquam autem, eum sint voluptates corporis, vero magni officia ullam dolores unde modi, nostrum harum culpa! Minus, dolore eligendi expedita error eum accusantium voluptatum illo quam?
+        Quam iure sit doloribus at, fuga voluptatem, incidunt alias assumenda labore ducimus, quasi deserunt magnam! Optio cum animi ex perferendis ut amet quam atque ipsum, veritatis doloremque eaque sit alias.
+        Blanditiis veritatis ea sit id repudiandae magni, vel ratione repellendus? Praesentium, voluptatem reprehenderit! Repellat similique, voluptate iste veritatis laboriosam, reprehenderit corporis ipsum saepe placeat animi, quo accusantium? Tempora, animi enim?
+        Hic, accusantium quas ut praesentium qui quis est explicabo in cumque tenetur odio eligendi quo nobis dolorum adipisci consectetur laudantium consequatur. Possimus porro hic, sunt rem unde veritatis nemo quaerat?
+        Nulla voluptates animi error odit ratione expedita! Ducimus molestias explicabo ullam illum eius sapiente assumenda voluptates maxime quas amet dolores quod dolorum architecto veniam vel, earum commodi nulla magnam laborum?
+        Molestiae provident ea aliquam eveniet minima quo tempore saepe quis dolorum odio necessitatibus mollitia error dolore, fuga id ducimus incidunt aut hic distinctio voluptatibus delectus! Libero ut minima eveniet dolorem!
+      </div>
+      <script>
+        const nav = document.querySelector(".nav-container");
+
+if (nav) {
+  const toggle = nav.querySelector(".nav-toggle");
+  
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      if (nav.classList.contains("is-active")) {
+        nav.classList.remove("is-active");
+      }
+      else {
+        nav.classList.add("is-active");
+      }
+    });
+    
+    nav.addEventListener("blur", () => {
+      nav.classList.remove("is-active");
+    });
+  }
+}
+
+      </script>
+</body>
+</html>
