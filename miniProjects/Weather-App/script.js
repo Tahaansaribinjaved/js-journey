@@ -21,7 +21,7 @@ if (nav) {
   if (toggle) {
     toggle.addEventListener("click", () => {
       if (nav.classList.contains("is-active")) {
-        // nav.classList.remove("is-active");
+        nav.classList.remove("is-active");
       }
       else {
         nav.classList.add("is-active");
