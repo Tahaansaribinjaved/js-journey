@@ -7,35 +7,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Main Layout Container -->
-    <!-- ✅ Sidebar (hidden by default) -->
-
+    <!-- Sidebar -->
     <div class="nav-container" tabindex="0">
       <div class="nav-toggle"></div>
-
       <nav class="nav-items">
-        <!-- Your menu items -->
-        <a class="nav-item" href="#">🔁 Unit Toggle</a>
-        <a class="nav-item" href="#">📜 History</a>
-        <input type="text" class="nav-item" />
-        <ul class="nav-item">
-          <li>title 1</li>
-          <li>title 2</li>
-          <li>title 3</li>
-          <li>title 4</li>
-          <li>title 5</li>
+        <a class="nav-item" href="#" id="unitToggle">🔁 Switch to °F</a>
+        <a class="nav-item" href="#" id="historyToggle">📜 History</a>
+        <ul class="history-list hidden">
+          <li>No history available</li>
         </ul>
-        <a class="nav-item" href="#">🧹 Clear History</a>
+        <a class="nav-item" href="#" id="clearHistory">🧹 Clear History</a>
       </nav>
     </div>
 
+    <!-- Main Content -->
     <div class="layout">
-      <!-- ✅ Main Content -->
       <div class="weather-container">
         <!-- Header -->
         <div class="header">
           <h1>🌤️ Weather Dashboard</h1>
-
           <form id="weatherForm">
             <input
               type="text"
@@ -46,8 +36,10 @@
             <button type="submit">Search</button>
           </form>
         </div>
-        <div id="resultBox">
-          <!-- Buttons -->
+
+        <!-- Result Box -->
+        <div id="resultBox" class="hidden">
+          <!-- Toggle Buttons -->
           <div id="weather-toggle">
             <button class="active" id="btn-current-weather">
               Show Current Weather
@@ -55,45 +47,41 @@
             <button id="btn-5-day-forecast">Show 5-Day Forecast</button>
           </div>
 
-          <!-- Animated container -->
-          <div id="animationWrapper">
-            <div id="innerContainer">
-              <!-- First div: Current Weather -->
-              
-
-              <div id="weatherResult" class="hidden slideDiv">
-                <h2 id="cityName"></h2>
-                <img id="weatherIcon" alt="Weather Icon" />
-                <p>
-                  <strong>Temperature:</strong> <span id="temperature"></span>°C
-                </p>
-                <p><strong>Condition:</strong> <span id="condition"></span></p>
+          <!-- Animated Container -->
+          <div id="innerContainer">
+            <div id="weatherResult" class="hidden">
+              <h2 id="cityName">Karachi</h2>
+              <img
+                id="weatherIcon"
+                alt="Weather Icon"
+              />
+              <div>
+                <p><strong>Temperature:</strong> <span id="temperature">23</span>°C</p>
+                <p><strong>Condition:</strong> <span id="condition">Clear</span></p>
               </div>
+              <div>
+                <p><strong>Humidity:</strong> <span id="humidity">12</span>%</p>
+                <p><strong>Wind Speed:</strong> <span id="windSpeed">23</span> km/h</p>
+              </div>
+            </div>
 
-              <!-- Forecast Section -->
-              <div id="forecastSection" class="hidden slideDiv">
+            <!-- Forecast Section -->
+            <div id="forecastSection" class="hidden">
+              <div id="forecastHeader">
                 <h3>5-Day Forecast</h3>
-
-                <!-- Toggle for Card/Graph View -->
-                <div class="forecast-toggle">
-                  <button id="cardViewBtn">Card View</button>
+                <div id="forecast-toggle">
+                  <button class="active" id="cardViewBtn">Card View</button>
                   <button id="graphViewBtn">Graph View</button>
                 </div>
-
-                <!-- Cards & Chart -->
-                <div id="forecastContainer" class="forecast-grid hidden"></div>
-                <canvas id="forecastChart" width="600" height="300"></canvas>
               </div>
+              <div id="forecastContainer" class="forecast-grid"></div>
+              <canvas id="forecastChart" class="hidden" width="600" height="300"></canvas>
             </div>
           </div>
         </div>
+
         <!-- Error Message -->
         <div id="error" class="hidden"></div>
-
-        <!-- Manual Weather Theme Testing (optional) -->
-        <button onclick="setWeather('clear')">Sunny</button>
-        <button onclick="setWeather('clouds')">Cloudy</button>
-        <button onclick="setWeather('rain')">Rainy</button>
       </div>
     </div>
 
@@ -103,7 +91,7 @@
     <div class="rainPart" style="display: none"></div>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
