@@ -1,0 +1,42 @@
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#resultBox {
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    gap: 10px;
+    overflow-x: hidden;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#weatherResult {
+    text-align: center;
+    color: #222;
+    margin-top: 20px;
+    /* flex: 1; */
+    /* Initially hidden */
+    transform: translateX(-100%);
+    transition: transform 3s ease-in-out;
+    background-color: rgba(247, 0, 0, 0.8); /* Semi-transparent background */
+}
+#weather-toggle {
+    width: 100%;
+    flex: 1;
+    margin: 0;
+}
+#forecastSection {
+    /* display: none; Initially hidden */
+    transform: translateX(100%);
+
+    transition: transform 3s ease-in-out;
+    margin-top: 20px;
+    background-color: blue;
+}

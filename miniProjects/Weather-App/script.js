@@ -12,27 +12,32 @@ const weatherIcon = document.getElementById('weatherIcon');
 //   const sidebar = document.getElementById("sidebar");
 //   sidebar.classList.toggle("open");
 // });
-
-const nav = document.querySelector(".nav-container");
+const nav = document.querySelector('.nav-container');
 
 if (nav) {
-  const toggle = nav.querySelector(".nav-toggle");
-  
+  const toggle = nav.querySelector('.nav-toggle');
+
   if (toggle) {
-    toggle.addEventListener("click", () => {
-      if (nav.classList.contains("is-active")) {
-        nav.classList.remove("is-active");
-      }
-      else {
-        nav.classList.add("is-active");
-      }
+    // When the toggle button is clicked, toggle the menu open/close
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('is-active');
     });
-    
-    nav.addEventListener("blur", () => {
-      nav.classList.remove("is-active");
+
+    // When clicking outside the menu, close it
+    document.addEventListener('click', (event) => {
+      if (!nav.contains(event.target)) {
+        nav.classList.remove('is-active');
+      }
     });
   }
 }
+
+
+const btnCurrentWeather = document.getElementById('btn-current-weather');
+const btn5DayForecast = document.getElementById('btn-5-day-forecast');
+const innerContainer = document.getElementById('innerContainer');
+
+
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();

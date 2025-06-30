@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Horizontal Toggle Divs</title>
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  #resultBox {
+    width: 80%;
+    display: flex;
+    flex-direction: column; /* vertically align */
+    gap: 10px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Buttons container */
+  #weather-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+
+  #weather-toggle button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+  #weather-toggle button.active {
+    background-color: #0056b3;
+  }
+
+  /* Both divs will be inside a wrapper for animation */
+  #animationWrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* The inner container holding the divs */
+  #innerContainer {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 200%; /* Two divs side by side */
+  }
+
+  /* Each div's style */
+  .slideDiv {
+    flex: 1 0 100%; /* take full width of wrapper */
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f0f0f0;
+    border-radius: 8px;
+    min-width: 50%; /* to ensure decent size */
+  }
+
+</style>
+</head>
+<body>
+
+<div id="resultBox">
+  <!-- Buttons -->
+  <div id="weather-toggle">
+    <button class="active" id="btn-current-weather">Show Current Weather</button>
+    <button id="btn-5-day-forecast">Show 5-Day Forecast</button>
+  </div>
+
+  <!-- Animated container -->
+  <div id="animationWrapper">
+    <div id="innerContainer">
+      <!-- First div: Current Weather -->
+      <div class="slideDiv" id="weatherResult">
+        <h2>Current Weather</h2>
+        <p>City: New York</p>
+        <p>Temperature: 25°C</p>
+        <p>Condition: Sunny</p>
+      </div>
+      <!-- Second div: Forecast -->
+      <div class="slideDiv" id="forecastSection">
+        <h2>5-Day Forecast</h2>
+        <p>Forecast details here...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const btnCurrent = document.getElementById('btn-current-weather');
+  const btnForecast = document.getElementById('btn-5-day-forecast');
+
+  const innerContainer = document.getElementById('innerContainer');
+
+  // Event listeners
+  btnCurrent.addEventListener('click', () => {
+    innerContainer.style.transform = 'translateX(0)';
+    // Active button styles
+    btnCurrent.classList.add('active');
+    btnForecast.classList.remove('active');
+  });
+  btnForecast.addEventListener('click', () => {
+    innerContainer.style.transform = 'translateX(-100%)'; // slide to show forecast
+    // Active button styles
+    btnForecast.classList.add('active');
+    btnCurrent.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>

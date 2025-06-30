@@ -49,6 +49,7 @@
     transition: margin-left 0.3s ease;
   }
 </style>
+<link rel="stylesheet" href="hamburger.css">
 </head>
 <body>
 
@@ -69,6 +70,37 @@
 <div class="content">
   <h1>Welcome to the Page</h1>
   <p>This is the main content area. Use the toggle button on the top-left to open or close the sidebar.</p>
+
+  <div id="weather-toggle">
+    <button class="active" id="btn-current-weather">Show Current Weather </button>
+    <button id="btn-5-day-forecast">Show 5-Day Forecast </button>
+  </div>
+  <div id="resultBox">
+    <div id="weatherResult" class="hidden">
+      <h2 id="cityName"></h2>
+      <img id="weatherIcon" alt="Weather Icon" />
+      <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
+      <p><strong>Condition:</strong> <span id="condition"></span></p>
+      </div>
+      <!-- Forecast Section -->
+        <div id="forecastSection" class="hidden">
+          <h3>5-Day Forecast</h3>
+
+          <!-- Toggle for Card/Graph View -->
+          <div class="forecast-toggle">
+            <button id="cardViewBtn">Card View</button>
+            <button id="graphViewBtn">Graph View</button>
+          </div>
+
+          <!-- Cards & Chart -->
+          <div id="forecastContainer" class="forecast-grid hidden"></div>
+          <canvas id="forecastChart" width="600" height="300"></canvas>
+        </div>
+
+
+
+
+  </div>
 </div>
 
 <script>

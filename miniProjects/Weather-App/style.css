@@ -8,46 +8,32 @@ body {
   background: linear-gradient(to top, #f0f8ff, #87ceeb); /* Default clear sky */
   overflow: scroll;
   transition: background 2s ease;
-  /* position: relative; */
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  
 }
 
 .weather-container {
   position: relative;
   width: 90%;
   max-width: 600px;
-  margin: 20px auto;
+  margin: 0px auto;
   z-index: 10;
   background: rgba(255, 255, 255, 0.2); /* Slightly more transparent for a glass effect */
-  padding: 20px;
+  padding: 0 20px;
   border-radius: 15px;
   backdrop-filter: blur(10px); /* Creates the frosted glass effect */
   -webkit-backdrop-filter: blur(10px); /* Safari support */
   border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass look */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-
-  /* ... existing styles ... */
   min-height: 300px; /* Ensure minimum height */
   transition: min-height 0.3s ease; /* Smooth transitions */
+  display: flex;
+  flex-direction: column;
 }
-/* Icon styles from FontAwesome */
-/* .fas {
-  font-size: 48px;
-  margin-bottom: 10px;
-  display: block;
-} */
-
-/* Buttons styling */
 button {
   margin: 10px;
   padding: 10px 20px;
   font-size: 16px;
 }
-
-
 
 /* Sunny Theme */
 body.clear {
@@ -62,9 +48,6 @@ body.clouds {
 body.rain {
   background: linear-gradient(to top, #272727 , #b7b7b7); /* Dark */
 }
-
-
-
 .sun {
   position: absolute;
   top: 50px;
@@ -82,9 +65,6 @@ body.rain {
  from { box-shadow: 0 0 30px 10px rgb(255, 200, 0); }
   to { box-shadow: 0 0 100px 40px rgb(255, 150, 0); }
 }
-
-
-
 .cloudsPart {
   position: absolute;
   top: 10px;
@@ -92,13 +72,10 @@ body.rain {
   height: 100%;
   pointer-events: none; /* so it doesn't block interactions */
   z-index: 5;
-
   background-image: url('./cloud-removebg-preview.png');
   background-repeat: repeat-x;
   background-position: bottom 0; /* positioning at bottom, left initially */
   background-size: contain; /* or 'auto' based on your image's needs */
-  
-  /* Start the animation on the background position X axis */
   animation: driftClouds 60s linear infinite;
 }
 
@@ -144,7 +121,13 @@ body.rain {
   }
 }
 
-
+.header{
+  text-align: center;
+  height: 120px;
+}
+.header h1{
+  margin: 10px 0;
+}
 
 #weatherForm {
   display: flex;
@@ -159,8 +142,6 @@ input[type="text"] {
   padding: 10px;
   font-size: 16px;
   width: 70%;
-  /* height: 40px; */
-  /* margin-right: 10px; */
   border: 1px solid #ccc;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -178,35 +159,39 @@ button[type="submit"] {
   border-bottom-right-radius: 8px;
   cursor: pointer;
   flex: 0 1 30%;
-    /* width: 30%; */
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-#weatherResult {
-  margin-top: 20px;
-}
-
 .hidden {
   display: none;
 }
+#weather-toggle{
+  margin: 0;
+  /* padding: 10px 20px; */
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-img {
-  width: 80px;
-  height: 80px;
 }
-
-/* <div id="weatherResult" class="hidden">
-        <h2 id="cityName"></h2>
-        <img id="weatherIcon" alt="Weather Icon" />
-        <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
-        <p><strong>Condition:</strong> <span id="condition"></span></p>
-      </div> */
-
+#weather-toggle button{
+  background-color: #007BFF;
+  margin: 0 10px;
+  outline: none;
+  border: none;
+  color: white; 
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#weather-toggle button.active {
+  background-color: #0056b3;
+}
 #weatherResult {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   text-align: center;
   color: #222;
 }
@@ -231,42 +216,13 @@ img {
 }
 #temperature {
   font-size: 20px;
-  /* color: #ff4500; Orange for temperature */
-  /* color: #ff6347; Tomato color for temperature */
 }
 #forecastSection {
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
-.forecast-grid {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
 
-.forecast-card {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
-  border-radius: 12px;
-  padding: 15px;
-  width: 120px;
-  text-align: center;
-  color: #333;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.forecast-card img {
-  width: 50px;
-  height: 50px;
-}
-
-.forecast-card h4 {
-  margin: 5px 0;
-  font-size: 16px;
-}
 #forecastChart {
   max-width: 90%;
   margin: 0 auto;
@@ -308,8 +264,8 @@ img {
     flex-direction: column;
     align-items: stretch; /* Ensures children take full width */
     gap: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    /* margin-top: 50px;
+    margin-bottom: 50px; */
     /* width: 90vw; */
     /* height: auto; */
   }
@@ -332,50 +288,10 @@ img {
   }
 }
 
-/* ===== Layout Wrapping ===== */
-.layout {
-  display: flex;
-  
-  width: 100%;
-  min-height: 100vh;
-}
-
-/* ===== Sidebar ===== */
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  width: 5%;
-/* display: none; */
-  background-color: rgba(0, 0, 0, 0.8);
-  overflow-x: hidden;
-  transition: width 0.4s ease;
-  color: white;
-  padding: 5px;
-  z-index: 20;
-}
-
-/* Opened sidebar */
-.sidebar.open {
-  width: 30%;
-  display: block;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar li {
-  margin: 20px 0;
-  font-size: 16px;
-  cursor: pointer;
-}
+/** sidebar  */
 
 /* ===== Toggle Button ===== */
 .toggle-btn {
-  /* position: fixed; */
-  /* top: 15px;
-  left: 15px; */
   z-index: 100;
   font-size: 24px;
   background-color: #ffffffaa;
@@ -406,6 +322,7 @@ img {
 }
 .nav-container.is-active .nav-items {
   transform: translate(0, 0);
+  /* left: 0; */
 }
 .nav-container .nav-toggle {
   position: relative;
@@ -462,3 +379,4 @@ img {
   cursor: pointer;
   background: #d6d6d6;
 }
+/* sidebar  */

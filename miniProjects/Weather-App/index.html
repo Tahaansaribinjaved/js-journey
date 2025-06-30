@@ -9,66 +9,86 @@
   <body>
     <!-- Main Layout Container -->
     <!-- ✅ Sidebar (hidden by default) -->
-    
 
-      <div class="nav-container" tabindex="0">
-        <div class="nav-toggle"></div>
+    <div class="nav-container" tabindex="0">
+      <div class="nav-toggle"></div>
 
-        <nav class="nav-items">
-          <a class="nav-item" href="#">🔁 Unit Toggle</a>
-          <a class="nav-item" href="#">📜 History</a>
-          <input type="text" name="" id="" class="nav-item">
-          <ul class="nav-item">
-            <li>title 1 </li>
-            <li>title 2 </li>
-            <li>title 3 </li>
-            <li>title 4 </li>
-            <li>title 5 </li>
-          </ul>
-          <a class="nav-item" href="#">🧹 Clear History</a>
-        </nav>
-      </div>
-      
-      <div class="layout">
+      <nav class="nav-items">
+        <!-- Your menu items -->
+        <a class="nav-item" href="#">🔁 Unit Toggle</a>
+        <a class="nav-item" href="#">📜 History</a>
+        <input type="text" class="nav-item" />
+        <ul class="nav-item">
+          <li>title 1</li>
+          <li>title 2</li>
+          <li>title 3</li>
+          <li>title 4</li>
+          <li>title 5</li>
+        </ul>
+        <a class="nav-item" href="#">🧹 Clear History</a>
+      </nav>
+    </div>
+
+    <div class="layout">
       <!-- ✅ Main Content -->
       <div class="weather-container">
-        <h1>🌤️ Weather Dashboard</h1>
+        <!-- Header -->
+        <div class="header">
+          <h1>🌤️ Weather Dashboard</h1>
 
-        <form id="weatherForm">
-          <input
-            type="text"
-            id="cityInput"
-            placeholder="Enter city name"
-            required
-          />
-          <button type="submit">Search</button>
-        </form>
-
-        <!-- Result -->
-        <div id="weatherResult" class="hidden">
-          <h2 id="cityName"></h2>
-          <img id="weatherIcon" alt="Weather Icon" />
-          <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
-          <p><strong>Condition:</strong> <span id="condition"></span></p>
+          <form id="weatherForm">
+            <input
+              type="text"
+              id="cityInput"
+              placeholder="Enter city name"
+              required
+            />
+            <button type="submit">Search</button>
+          </form>
         </div>
-
-        <!-- Error Message -->
-        <div id="error" class="hidden"></div>
-
-        <!-- Forecast Section -->
-        <div id="forecastSection" class="hidden">
-          <h3>5-Day Forecast</h3>
-
-          <!-- Toggle for Card/Graph View -->
-          <div class="forecast-toggle">
-            <button id="cardViewBtn">Card View</button>
-            <button id="graphViewBtn">Graph View</button>
+        <div id="resultBox">
+          <!-- Buttons -->
+          <div id="weather-toggle">
+            <button class="active" id="btn-current-weather">
+              Show Current Weather
+            </button>
+            <button id="btn-5-day-forecast">Show 5-Day Forecast</button>
           </div>
 
-          <!-- Cards & Chart -->
-          <div id="forecastContainer" class="forecast-grid hidden"></div>
-          <canvas id="forecastChart" width="600" height="300"></canvas>
+          <!-- Animated container -->
+          <div id="animationWrapper">
+            <div id="innerContainer">
+              <!-- First div: Current Weather -->
+              
+
+              <div id="weatherResult" class="hidden slideDiv">
+                <h2 id="cityName"></h2>
+                <img id="weatherIcon" alt="Weather Icon" />
+                <p>
+                  <strong>Temperature:</strong> <span id="temperature"></span>°C
+                </p>
+                <p><strong>Condition:</strong> <span id="condition"></span></p>
+              </div>
+
+              <!-- Forecast Section -->
+              <div id="forecastSection" class="hidden slideDiv">
+                <h3>5-Day Forecast</h3>
+
+                <!-- Toggle for Card/Graph View -->
+                <div class="forecast-toggle">
+                  <button id="cardViewBtn">Card View</button>
+                  <button id="graphViewBtn">Graph View</button>
+                </div>
+
+                <!-- Cards & Chart -->
+                <div id="forecastContainer" class="forecast-grid hidden"></div>
+                <canvas id="forecastChart" width="600" height="300"></canvas>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- Error Message -->
+        <div id="error" class="hidden"></div>
 
         <!-- Manual Weather Theme Testing (optional) -->
         <button onclick="setWeather('clear')">Sunny</button>
