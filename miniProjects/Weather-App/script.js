@@ -49,11 +49,13 @@ if (nav) {
 }
 
 // Initialize button active states
-if (btnCurrentWeather && btn5DayForecast) {
-  btnCurrentWeather.classList.add('active');
-  btnCurrentWeather.addEventListener('click', () => toggleForecastView(true));
-  btn5DayForecast.addEventListener('click', () => toggleForecastView(false));
-}
+// if (btnCurrentWeather && btn5DayForecast) {
+//   btnCurrentWeather.classList.add('active');
+//   btnCurrentWeather.addEventListener('click', () => toggleForecastView(true));
+//   btn5DayForecast.addEventListener('click', () => toggleForecastView(false));
+// }
+
+
 
 // Card vs Graph view toggle
 if (cardViewBtn && graphViewBtn) {
