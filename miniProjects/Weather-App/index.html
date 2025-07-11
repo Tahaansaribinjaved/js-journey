@@ -11,7 +11,6 @@
     <div class="nav-container" tabindex="0">
       <div class="nav-toggle"></div>
       <nav class="nav-items">
-        <a class="nav-item" href="#" id="unitToggle">🔁 Switch to °F</a>
         <a class="nav-item" href="#" id="historyToggle">📜 History</a>
         <ul class="history-list hidden">
           <li>No history available</li>
@@ -39,43 +38,23 @@
 
         <!-- Result Box -->
         <div id="resultBox" class="hidden">
-          <!-- Toggle Buttons -->
-          <div id="weather-toggle">
-            <button class="active" id="btn-current-weather">
-              Show Current Weather
-            </button>
-            <button id="btn-5-day-forecast">Show 5-Day Forecast</button>
-          </div>
-
-          <!-- Animated Container -->
           <div id="innerContainer">
-            <div id="weatherResult" class="hidden">
-              <h2 id="cityName">Karachi</h2>
-              <img
-                id="weatherIcon"
-                alt="Weather Icon"
-              />
-              <div>
-                <p><strong>Temperature:</strong> <span id="temperature">23</span>°C</p>
-                <p><strong>Condition:</strong> <span id="condition">Clear</span></p>
-              </div>
-              <div>
-                <p><strong>Humidity:</strong> <span id="humidity">12</span>%</p>
-                <p><strong>Wind Speed:</strong> <span id="windSpeed">23</span> km/h</p>
-              </div>
-            </div>
-
-            <!-- Forecast Section -->
-            <div id="forecastSection" class="hidden">
-              <div id="forecastHeader">
-                <h3>5-Day Forecast</h3>
-                <div id="forecast-toggle">
-                  <button class="active" id="cardViewBtn">Card View</button>
-                  <button id="graphViewBtn">Graph View</button>
-                </div>
-              </div>
-              <div id="forecastContainer" class="forecast-grid"></div>
-              <canvas id="forecastChart" class="hidden" width="600" height="300"></canvas>
+            <div id="loader" class="hidden"><div class="loader"></div></div>
+            <div id="weatherResult" class="hidden parent">
+              <h2 id="cityName" class="div1">Karachi</h2>
+              <img id="weatherIcon" class="div2" alt="Weather Icon" />
+                <p class="div3">
+                  <strong>Temperature:</strong>
+                  <span id="temperature">23</span>°C
+                </p>
+                  <p class="div4">
+                  <strong>Condition:</strong> <span id="condition">Clear</span>
+                </p>
+                <p class="div5"><strong>Humidity:</strong> <span id="humidity">12</span>%</p>
+                <p class="div6">
+                  <strong>Wind Speed:</strong>
+                  <span id="windSpeed">23</span> km/h
+                </p>
             </div>
           </div>
         </div>
@@ -90,8 +69,7 @@
     <div class="cloudsPart" style="display: none"></div>
     <div class="rainPart" style="display: none"></div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Script -->
     <script src="script.js"></script>
   </body>
 </html>
