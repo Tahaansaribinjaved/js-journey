@@ -20,9 +20,9 @@ let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
 let isFetching = false;
 
 // Check for required DOM elements
-// if (!form || !cityInput || !resultBox || !errorDiv || !weatherResult || !innerContainer || !loader) {
-//   console.error('One or more required DOM elements are missing');
-// }
+if (!form || !cityInput || !resultBox || !errorDiv || !weatherResult || !innerContainer || !loader) {
+  console.error('One or more required DOM elements are missing');
+}
 
 // Initialize sidebar
 const nav = document.querySelector('.nav-container');
@@ -107,7 +107,8 @@ form.addEventListener('submit', async (e) => {
       throw new Error('Invalid weather data received');
     }
 
-    updateUI(weatherData);
+      updateUI(weatherData);
+    
 
     // Update search history
     if (!searchHistory.map(c => c.toLowerCase()).includes(city.toLowerCase())) {
@@ -121,8 +122,9 @@ form.addEventListener('submit', async (e) => {
     console.error('Error fetching weather:', error);
   } finally {
     loader.classList.add('hidden');
-    submitBtn.disabled = false;
-    isFetching = false;
+
+      submitBtn.disabled = false;
+      isFetching = false;
   }
 });
 
