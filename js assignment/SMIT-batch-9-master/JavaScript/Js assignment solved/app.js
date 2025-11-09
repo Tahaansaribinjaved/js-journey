@@ -42,3 +42,54 @@
 
 // var birthYear = 2007;
 // alert("My birth year is " + birthYear+ "\ndataType of my declared variable is "+typeof(birthYear));
+
+
+        //! 5-7.MAth
+// 7. Write a program to implement checkout process of a shopping
+// cart system for an e-commerce website. Store the following in
+// variables
+// a. Price of item 1
+// b. Price of item 2
+// c. Ordered quantity of item 1
+// d. Ordered Quantity of item 2
+// e. Shipping charges
+
+// var price_of_p1 = 560;
+// var price_of_p2 = 200;
+// var Q_of_Item_1 = 2;
+// var Q_of_Item_2 = 5;
+// var Shipping_Charges =150;
+// var total_cost = (price_of_p1*Q_of_Item_1)+(price_of_p2*Q_of_Item_2)+Shipping_Charges;
+// alert(total_cost);
+
+// Assume we have 10 US dollars & 25 Saudi Riyals. Write a script
+// to convert the total currency to Pakistani Rupees. Perform all
+// calculations in a single expression.
+// (Exchange rates : 1 US Dollar = 104 Pakistani Rupee and
+// 1 Saudi Riyal = 28 Pakistani Rupee)
+// var total_pak_rupees = (10*104)+(25*28);
+// // alert(total_pak_rupees);
+// 10. Write a program to initialize a variable with some number
+// and do arithmetic in following sequence:
+// a. Add 5
+// b. Multiply by 10
+// c. Divide the result by 2
+// Perform all calculations in a single expression.
+// var num = 5;
+// num = ((num+5)*10)/2;
+// alert(num);
+
+// 11. The Age Calculator: Forgot how old someone is? Calculate
+// it!
+// a. Store the current year in a variable.
+// b. Store their birth year in a variable.
+// c. Calculate their 2 possible ages based on the stored values.
+// Output them to the screen like so: “They are either NN or NN
+// years old”. 
+
+// var c_year = new Date();
+// var b_year = new Date("24-aug-2007")
+
+// alert((c_year-b_year)/31557600000);
+
+            //& math completed at 10 nov 12:46 AM
