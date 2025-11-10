@@ -133,12 +133,44 @@
 
 
 // guess number
-var guess_number = +prompt("guess a number ");
-var secret_number = 5;
-if(guess_number==secret_number){
-        console.log(`Bom you guess excat number ${guess_number}`);
-}else if(guess_number>secret_number){
-        console.log(`excat number is lowest`);
-}else if(guess_number<secret_number){
-        console.log(`excat number is highest`);
-}
+// var guess_number = +prompt("guess a number ");
+// var secret_number = 5;
+// if(guess_number==secret_number){
+//         console.log(`Bom you guess excat number ${guess_number}`);
+// }else if(guess_number>secret_number){
+//         console.log(`excat number is lowest`);
+// }else if(guess_number<secret_number){
+//         console.log(`excat number is highest`);
+// }
+
+// Write a program that takes time as input from user in 24 hours
+// clock format like: 1900 = 7pm. Implement the following case
+// using if, else & else if statements
+
+// var time = 1900;
+
+// if(time>=0 &&time<1200){
+//         console.log("Good morning");
+// }else if(time>=1200&&time<1700){
+//         console.log("Good afternoon");
+// }else if(time>=1700&&time<2100){
+//         console.log("Good evening");
+// }else if(time>=2100&&time<2400){
+//         console.log("Good night");
+// }
+
+// leap year
+// var year = 1900;
+// if(year%400==0){
+//         console.log("leap year 400");
+// }else if(year%100==0){
+//         console.log("not leap year 100");
+// }else if(year%4==0){
+//         console.log("leap year 4");
+// }else{
+//         console.log("not leap year ");
+// }
+
+//
+
+        //& array 10Q completed at 11 nov 12:20 AM
