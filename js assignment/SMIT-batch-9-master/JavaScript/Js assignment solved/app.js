@@ -93,3 +93,52 @@
 // alert((c_year-b_year)/31557600000);
 
             //& math completed at 10 nov 12:46 AM
+
+        //! 8-11_ConcatenatingStrings_Prompts_IFStatements_ComparisonOperators
+// 4. Write a program to take “gender” as input from user. If the
+// user is male, give the message: Good Morning Sir. If the user is
+// female, give the message: Good Morning Ma’am.
+
+// var gender = prompt("Enter your gender");
+
+// if(gender.toLowerCase()=="male"){
+//         console.log("Good morning,Sir");
+// }else if(gender.toLowerCase()=="female"){
+//         console.log("Good morning,MA'AM");
+// }
+
+// 10. Write a program to implement checkout process of a
+// shopping cart system for an e-commerce website. Take input
+// from users, the following:
+// a. Name of item1
+// b. Name of item2
+// c. Price of item 1
+// d. Price of item 2
+// e. Ordered quantity of item 1
+// f. Ordered Quantity of item 2
+// g. Shipping charges
+// Compute the total cost. If the total cost is above 2000 PKR ,
+// offer them 10% discount & show the receipt in your browser.
+// var price_of_p1 = 560;
+// var price_of_p2 = 200;
+// var Q_of_Item_1 = 2;
+// var Q_of_Item_2 = 5;
+// var Shipping_Charges =150;
+// var discounted_price;
+// var total_cost = (price_of_p1*Q_of_Item_1)+(price_of_p2*Q_of_Item_2)+Shipping_Charges;
+// if(total_cost>2000){
+//         discounted_price = total_cost - (total_cost * 10/100)
+// }
+// alert(`total price ${total_cost} , discounted cost : ${discounted_price}`);
+
+
+// guess number
+var guess_number = +prompt("guess a number ");
+var secret_number = 5;
+if(guess_number==secret_number){
+        console.log(`Bom you guess excat number ${guess_number}`);
+}else if(guess_number>secret_number){
+        console.log(`excat number is lowest`);
+}else if(guess_number<secret_number){
+        console.log(`excat number is highest`);
+}
