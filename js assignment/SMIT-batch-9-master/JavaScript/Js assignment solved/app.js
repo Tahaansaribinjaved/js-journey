@@ -174,3 +174,17 @@
 //
 
         //& array 10Q completed at 11 nov 12:20 AM
+
+// var greeting;
+//  var hour = 13;
+//  if (hour < 18) {
+//  greeting = "Good day";
+//  }else{
+//  greeting = "Good evening";
+//  } 
+
+// Write a JavaScript program that accept two integers and
+// display the larger. Also show if the two integers are equal.
+
+// var num1=+prompt("Enter number 1"),num2=+prompt("Enter number 2");
+// console.log(num1==num2 ? "num1 and num2 is equal ":num1<num2?"num2 is greater":"num1 is greater");
